@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="bower_components/bootstrap2.2.2.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="http://static.livedemo00.template-help.com/wt_44381/css/responsive.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://livedemo00.template-help.com/wt_44381/css/flexslider.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://livedemo00.template-help.com/wt_44381/css/jquery.fancybox.css">
+    <!--JS-->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/superfishete.js"></script>
+    <script type="text/javascript" src="bower_components/jquery.mobilemenu.js"></script>
+    <script type="text/javascript" src="bower_components/jquery.cookie.js"></script>
+    <script type="text/javascript" src="bower_components/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="bower_components/jquery.ui.totop.js"></script>
+    <script type="text/javascript" src="bower_components/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="bower_components/sForm.js"></script>
+    <script type="text/javascript" src="bower_components/sprites.js"></script>
+    <script type="text/javascript" src="bower_components/jquery.fancyboxpack.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+
+    <script>
+        var app = angular.module("app", []);
+
+        app.controller("mainController", function ($scope) {
+
+            $scope.textures = [
+                {
+                    "displayName": "Bricks Medium Use",
+                    "name": "bricks1",
+                    "category": "Bricks",
+                    "description": "A slightly dusty looking red brick wall."
+                },
+                {
+                    "displayName": "Old Bricks",
+                    "name": "bricks2",
+                    "category": "Bricks",
+                    "description": "A beautiful, worn down cobbled brick road material."
+                },
+                {
+                    "displayName": "Concrete Used",
+                    "name": "concrete1",
+                    "category": "Concrete",
+                    "description": "Excellent to be used as wall"
+                },
+                {
+                    "displayName": "Human hair",
+                    "name": "hair",
+                    "category": "hair",
+                    "description": "A slightly dusty looking red brick wall."
+                },
+                {
+                    "displayName": "Metal Stained",
+                    "name": "metal1",
+                    "category": "Metal",
+                    "description": "A beautiful, worn down cobbled metal road material."
+                },
+                {
+                    "displayName": "Metal",
+                    "name": "metal2",
+                    "category": "Metal",
+                    "description": "A beautiful, worn down cobbled metal road material."
+                },
+                {
+                    "displayName": "Metal",
+                    "name": "metal3",
+                    "category": "Metal",
+                    "description": "A beautiful, worn down cobbled metal road material."
+                },
+                {
+                    "displayName": "Metal ",
+                    "name": "metal4",
+                    "category": "Metal",
+                    "description": "A beautiful, worn down cobbled metal road material."
+                },
+                {
+                    "displayName": "Metal ",
+                    "name": "metal5",
+                    "category": "Metal",
+                    "description": "A beautiful, worn down cobbled metal road material."
+                },
+
+                               ];
+
+        });
+    </script>
+
+    <script>
+        $(window).load(function () {
+            $('#slides-pagination').flexslider({
+                animation: "fade",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                prevText: "",
+                nextText: "",
+                itemWidth: 253,
+                itemMargin: 1,
+                asNavFor: '#flexslider'
+            });
+            $('#flexslider').flexslider({
+                animation: "fade",
+                slideshow: true,
+                slideshowSpeed: 7000,
+                animationDuration: 600,
+                prevText: "",
+                nextText: "",
+                controlNav: false,
+                sync: "#slides-pagination"
+            })
+            $('#tab_preview a').click(function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            })
+        });
+    </script>
+    <!--[if lt IE 8]>
+		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div>  
+<![endif]-->
+    <!--[if lt IE 9]>
+  <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/docs.css" type="text/css" media="screen">
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="follow-panel">
+            <div class="container">
+                <ul class="login">
+                    <li><a href="#">Login</a>
+                    </li>
+                    <li><a href="#">Registration</a>
+                    </li>
+                </ul>
+                <ul class="follow-icon">
+                    <li>
+                        <a href="#"><img src="images/follow_icon1.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/follow_icon2.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/follow_icon3.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/follow_icon4.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="menu">
+        <div class="pattern">
+            <div class="container">
+                <div class="navbar navbar_ clearfix">
+                    <div class="navbar-inner">
+                        <div class="clearfix">
+                            <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1>
+                            <div class="nav-collapse nav-collapse_ collapse">
+                                <ul class="nav sf-menu clearfix">
+                                    <li class="active"><a href="index.html">Home</a>
+                                    </li>
+                                    <li><a href="index-1.html">About Us<br><span></span></a>
+                                        <ul>
+                                            <li><a href="#">Lorem ipsum dolor</a>
+                                            </li>
+                                            <li><a href="#">Sit amet conse</a>
+                                            </li>
+                                            <li><a href="#">Ctetur adipisicing elit</a>
+                                            </li>
+                                            <li><a href="#">Sed do eiusmod<span></span></a>
+                                                <ul>
+                                                    <li><a href="#">Lorem ipsum dolor</a>
+                                                    </li>
+                                                    <li><a href="#">Sit amet conse</a>
+                                                    </li>
+                                                    <li><a href="#">Ctetur adipisicing elit</a>
+                                                    </li>
+                                                    <li><a href="#">Sed do eiusmod</a>
+                                                    </li>
+                                                    <li><a href="#">Tempor incididunt ut</a>
+                                                    </li>
+                                                    <li><a href="#">Labore et</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Tempor incididunt ut</a>
+                                            </li>
+                                            <li><a href="#">Labore et</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="index-2.html">Blog</a>
+                                    </li>
+                                    <li><a href="index-3.html">Games</a>
+                                    </li>
+                                    <li><a href="index-4.html">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="slider">
+        <div id="flexslider">
+            <ul class="slides clearfix">
+                <li>
+                    <img alt="" src="images/picture1.jpg">
+                </li>
+                <li>
+                    <img alt="" src="images/picture2.jpg">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="container padTop1 padBot1">
+        <div class="row">
+            <article class="span3">
+                <h2>Categories</h2>
+                <ul class="list2">
+
+                    <li><a href="#">Substance</a>
+                    </li>
+                    <li><a href="#">Bricks</a>
+                    </li>
+                    <li><a href="#">Ceilling</a>
+                    </li>
+                    <li><a href="#">Concrete</a>
+                    </li>
+                    <li><a href="#">Marble</a>
+                    </li>
+                    <li><a href="#">Doors & Windows</a>
+                    </li>
+                    <li><a href="#">Grounds & Floors</a>
+                    </li>
+                    <li><a href="#">Plaster</a>
+                    </li>
+                    <li><a href="#">Metal</a>
+                    </li>
+                    <li><a href="#">Roofing</a>
+                    </li>
+                    <li><a href="#">Tile</a>
+                    </li>
+                    <li><a href="#">Wood</a>
+                    </li>
+
+
+                </ul>
+            </article>
+
+
+            <article class="span9">
+                <ul class="nav nav-tabs" id="tab_preview">
+                    <li class="active"><a href="#section_1">All New</a>
+                    </li>
+                    <li><a href="#section_2">Popular</a>
+                    </li>
+                    <li><a href="#section_3">Top Rated</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+
+
+
+                    <div class="tab-pane  active" id="section_1" ng-controller="mainController">
+
+
+                        <div class="thumb-pad1 margRight" ng-repeat="texture in textures">
+                            <div class="thumbnail">
+                                <figure class="img-polaroid">
+                                    <img ng-src="images/previews/{{texture.name}}.png" alt="">
+                                </figure>
+                                <div class="caption">
+                                    <h3>{{texture.displayName}}</h3>
+                                    <p>{{texture.description}} <a href="preview.html" class="btn btn-link">Read More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="tab-pane" id="section_2">
+
+                        <div class="thumb-pad1 margRight">
+                            <div class="thumbnail">
+                                <figure class="img-polaroid"><img src="images/material.png" alt="">
+                                </figure>
+                                <div class="caption">
+                                    <h3>Urban Chaos (2013)</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. <a href="#" class="btn btn-link">Read More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thumb-pad1 margRight">
+                            <div class="thumbnail">
+                                <figure class="img-polaroid"><img src="images/material.png" alt="">
+                                </figure>
+                                <div class="caption">
+                                    <h3>Crysis 2 (2013)</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. <a href="#" class="btn btn-link">Read More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thumb-pad1">
+                            <div class="thumbnail">
+                                <figure class="img-polaroid"><img src="images/material.png" alt="">
+                                </figure>
+                                <div class="caption">
+                                    <h3>Darksiders (2013)</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. <a href="#" class="btn btn-link">Read More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thumb-pad1 margRight">
+                            <div class="thumbnail">
+                                <figure class="img-polaroid"><img src="images/material.png" alt="">
+                                </figure>
+                                <div class="caption">
+                                    <h3>Battlefield (2013)</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. <a href="#" class="btn btn-link">Read More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thumb-pad1 margRight">
+                            <div class="thumbnail">
+                                <figure class="img-polaroid"><img src="images/material.png" alt="">
+                                </figure>
+                                <div class="caption">
+                                    <h3>Half Life 3 (2013)</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. <a href="#" class="btn btn-link">Read More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thumb-pad1">
+                            <div class="thumbnail">
+                                <figure class="img-polaroid"><img src="images/material.png" alt="">
+                                </figure>
+                                <div class="caption">
+                                    <h3>James Heller (2013)</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. <a href="#" class="btn btn-link">Read More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thumb-pad1 margRight">
+                            <div class="thumbnail">
+                                <figure class="img-polaroid"><img src="images/material.png" alt="">
+                                </figure>
+                                <div class="caption">
+                                    <h3>Star Key 3 (2013)</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. <a href="#" class="btn btn-link">Read More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thumb-pad1 margRight">
+                            <div class="thumbnail">
+                                <figure class="img-polaroid"><img src="images/material.png" alt="">
+                                </figure>
+                                <div class="caption">
+                                    <h3>Star Craft 2 (2013)</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. <a href="#" class="btn btn-link">Read More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thumb-pad1">
+                            <div class="thumbnail">
+                                <figure class="img-polaroid"><img src="images/material.png" alt="">
+                                </figure>
+                                <div class="caption">
+                                    <h3>Two Worlds (2013)</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. <a href="#" class="btn btn-link">Read More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                    <div class="tab-pane" id="section_3">
+
+                        <div class="thumb-pad1 margRight">
+                            <div class="thumbnail">
+                                <figure class="img-polaroid"><img src="images/material.png" alt="">
+                                </figure>
+                                <div class="caption">
+                                    <h3>Urban Chaos (2013)</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. <a href="#" class="btn btn-link">Read More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thumb-pad1 margRight">
+                            <div class="thumbnail">
+                                <figure class="img-polaroid"><img src="images/material.png" alt="">
+                                </figure>
+                                <div class="caption">
+                                    <h3>Crysis 2 (2013)</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. <a href="#" class="btn btn-link">Read More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thumb-pad1">
+                            <div class="thumbnail">
+                                <figure class="img-polaroid"><img src="images/material.png" alt="">
+                                </figure>
+                                <div class="caption">
+                                    <h3>Darksiders (2013)</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. <a href="#" class="btn btn-link">Read More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thumb-pad1 margRight">
+                            <div class="thumbnail">
+                                <figure class="img-polaroid"><img src="images/material.png" alt="">
+                                </figure>
+                                <div class="caption">
+                                    <h3>Battlefield (2013)</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. <a href="#" class="btn btn-link">Read More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thumb-pad1 margRight">
+                            <div class="thumbnail">
+                                <figure class="img-polaroid"><img src="images/material.png" alt="">
+                                </figure>
+                                <div class="caption">
+                                    <h3>Half Life 3 (2013)</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. <a href="#" class="btn btn-link">Read More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thumb-pad1">
+                            <div class="thumbnail">
+                                <figure class="img-polaroid"><img src="images/material.png" alt="">
+                                </figure>
+                                <div class="caption">
+                                    <h3>James Heller (2013)</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. <a href="#" class="btn btn-link">Read More</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+
+    <!--footer-->
+    <footer>
+        <div class="container">
+
+            <p>BlackSoul Textures Copyright &copy; 2015 &bull; <a href="index-5.html">Privacy Policy</a>
+            </p>
+            <!-- {%FOOTER_LINK} -->
+        </div>
+    </footer>
+
+
+
+
+
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script>
+        $('.btn.btn-primary, .btn.btn-info').sprites({
+            method: 'gStretch',
+            hover: true
+        })
+    </script>
+    <script>
+        $('.follow-panel .follow-icon li a').hover(function () {
+            $(this).stop().animate({
+                opacity: 0.3
+            }, 350, "easeOutSine");
+        }, function () {
+            $(this).stop().animate({
+                opacity: 1
+            }, 350, "easeOutSine");
+        })
+        $('.video a').hover(function () {
+            $(this).stop().animate({
+                opacity: 0.5
+            }, 350, "easeOutSine");
+        }, function () {
+            $(this).stop().animate({
+                opacity: 1
+            }, 350, "easeOutSine");
+        })
+    </script>
+
+
+    <!--script>
+        if ($.browser.msie && $.browser.version == 8) {
+            $('.nav-collapse_ .nav > li > a span').css({
+                'display': 'none'
+            });
+            $('.thumb-pad1').css({
+                'width': '200px'
+            });
+            $('#subscribe-form input').css({
+                'width': '170px'
+            });
+            $('.list4').css({
+                'display': 'none'
+            });
+            $('.span4.comments').css({
+                'width': '55%'
+            });
+        }
+        if ($.browser.opera) {
+            $('#menu').css({
+                'margin-top': '-12px'
+            });
+        }
+    </script-->
+
+</body>
+
+</html>
